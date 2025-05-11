@@ -1,0 +1,10 @@
+#bin/bash
+
+git pull origin main 
+
+npm i 
+
+npm run build 
+pm2 delete server
+pm2 start ./dist/server.js
+pm2 restart all

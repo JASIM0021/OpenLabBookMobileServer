@@ -1,0 +1,241 @@
+{
+  "clientName": "Thunder Client",
+  "collectionName": "OpenLabBookMobile",
+  "collectionId": "4d7308ef-ebdb-49af-a629-dcf92799792d",
+  "dateExported": "2024-08-27T02:02:43.463Z",
+  "version": "1.2",
+  "folders": [
+    {
+      "_id": "78297125-f52f-4144-82e7-42546fac3ffa",
+      "name": "appointment",
+      "containerId": "",
+      "created": "2024-08-25T06:01:45.893Z",
+      "sortNum": 10000
+    },
+    {
+      "_id": "59cd4898-fc58-436d-afc0-3ec112897fb9",
+      "name": "auth",
+      "containerId": "",
+      "created": "2024-08-25T06:02:30.186Z",
+      "sortNum": 20000
+    },
+    {
+      "_id": "3649e98f-5a41-42b9-a654-49087f25a635",
+      "name": "patient",
+      "containerId": "",
+      "created": "2024-08-25T06:04:46.259Z",
+      "sortNum": 30000
+    },
+    {
+      "_id": "707574e8-9f0c-4de2-905c-fbecaf34a8d4",
+      "name": "organization",
+      "containerId": "",
+      "created": "2024-08-25T06:19:55.171Z",
+      "sortNum": 40000
+    },
+    {
+      "_id": "344c53ef-a35f-4c51-8aaf-01797372d86a",
+      "name": "medical test",
+      "containerId": "",
+      "created": "2024-08-25T11:56:03.223Z",
+      "sortNum": 50000
+    }
+  ],
+  "requests": [
+    {
+      "_id": "50eb1508-9642-451e-83b6-981027b66891",
+      "colId": "4d7308ef-ebdb-49af-a629-dcf92799792d",
+      "containerId": "78297125-f52f-4144-82e7-42546fac3ffa",
+      "name": "appointment book",
+      "url": "http://localhost:5000/api/v1/appointments",
+      "method": "POST",
+      "sortNum": 10000,
+      "created": "2024-08-25T06:01:56.748Z",
+      "modified": "2024-08-27T01:32:59.976Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJQLTAwMDIiLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTcyNDcyMTIzMiwiZXhwIjoxNzI1NTg1MjMyfQ.m4aj_jwYuWpkpNshd6sAD13S_G1X9_9I2kQbpsiNjEM"
+        }
+      ],
+      "body": {
+        "type": "formdata",
+        "raw": "",
+        "form": [
+          {
+            "name": "data",
+            "value": "{ \"organization\": \"66cd2b22900a083b133f9d60\", \"paymentStatus\": \"PAID\", \"notes\": \"Patient needs to follow up in two weeks.\", \"review\": \"Great service and friendly staff.\", \"reportPhoto\": \"https://example.com/report1.jpg\", \"prescriptionPhoto\": \"https://example.com/prescription1.jpg\", \"medicalTestLists\":[ { \"appointmentTiming\": { \"day\": \"Monday\", \"startTime\": \"10:00 AM\", \"endTime\": \"11:00 AM\" }, \"testCode\":\"54ty\", \"testName\": \"test one\", \"sample\": \"z.string()\", \"mrp\": 453 }] , \"patientInfo\": { \"name\": \"John Doe\", \"contactNumber\": \"1234567890\", \"age\": 30, \"sex\": \"MALE\", \"referBy\": \"Dr. Smith\", \"pinCode\": \"123456\", \"address\": \"1234 Elm Street, Springfield\", \"prescription\": [ \"Prescription 1\", \"Prescription 2\" ] } }"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "adfe6071-374c-411d-af30-3eeba9fc0632",
+      "colId": "4d7308ef-ebdb-49af-a629-dcf92799792d",
+      "containerId": "59cd4898-fc58-436d-afc0-3ec112897fb9",
+      "name": "super admin login",
+      "url": "http://localhost:5000/api/v1/auth/superadmin-login",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2024-08-25T06:02:41.858Z",
+      "modified": "2024-08-25T06:04:21.480Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"contactNumber\":\"8420377092\",\n  \"otp\":\"1234\"\n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "4289513f-26cf-418c-8f64-a7e1c715f048",
+      "colId": "4d7308ef-ebdb-49af-a629-dcf92799792d",
+      "containerId": "3649e98f-5a41-42b9-a654-49087f25a635",
+      "name": "patient add",
+      "url": "http://localhost:5000/api/v1/users/create-patient",
+      "method": "POST",
+      "sortNum": 30000,
+      "created": "2024-08-25T06:04:56.174Z",
+      "modified": "2024-08-27T01:13:09.839Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n \n    \"contactNumber\":\"4565456765\"\n    \n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "ad2fc2c8-254c-4ce3-9c05-b71dc75b5baf",
+      "colId": "4d7308ef-ebdb-49af-a629-dcf92799792d",
+      "containerId": "3649e98f-5a41-42b9-a654-49087f25a635",
+      "name": "otp verify",
+      "url": "http://localhost:5000/api/v1/auth/verify-otp",
+      "method": "POST",
+      "sortNum": 40000,
+      "created": "2024-08-25T06:07:05.731Z",
+      "modified": "2024-08-27T01:13:52.186Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n   \"otp\":\"6779\",\n    \"contactNumber\":\"4565456765\"\n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "69e20b4c-5561-4299-9fe2-a5028d977a77",
+      "colId": "4d7308ef-ebdb-49af-a629-dcf92799792d",
+      "containerId": "707574e8-9f0c-4de2-905c-fbecaf34a8d4",
+      "name": "organization create",
+      "url": "http://localhost:5000/api/v1/organizations/create-organization",
+      "method": "POST",
+      "sortNum": 50000,
+      "created": "2024-08-25T06:20:07.134Z",
+      "modified": "2024-08-27T01:25:54.377Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwMDAxIiwicm9sZSI6InN1cGVyQWRtaW4iLCJpYXQiOjE3MjQ1Njk0NzYsImV4cCI6MTcyNTQzMzQ3Nn0.kz9ss9H1o_5BDCoRqkvhzHEcgdVaNQ7NcowkBQn68jE"
+        }
+      ],
+      "body": {
+        "type": "formdata",
+        "raw": "",
+        "form": [
+          {
+            "name": "data",
+            "value": "{ \"name\": \"HealthCare Diagnostics\", \"medicalTests\": [ ], \"organizationName\": \"HealthFirst Labs\", \"organizationContactNumber\": \"9876543210\", \"organizationPhoto\": \"https://example.com/photo.jpg\", \"organizationTiming\": [ { \"day\": \"Monday\", \"startTime\": \"08:00 AM\", \"endTime\": \"05:00 PM\" }, { \"day\": \"Tuesday\", \"startTime\": \"08:00 AM\", \"endTime\": \"05:00 PM\" }, { \"day\": \"Wednesday\", \"startTime\": \"08:00 AM\", \"endTime\": \"05:00 PM\" }, { \"day\": \"Thursday\", \"startTime\": \"08:00 AM\", \"endTime\": \"05:00 PM\" }, { \"day\": \"Friday\", \"startTime\": \"08:00 AM\", \"endTime\": \"05:00 PM\" }, { \"day\": \"Saturday\", \"startTime\": \"09:00 AM\", \"endTime\": \"02:00 PM\" } ], \"organizationAddress\": \"1234 Elm Street, Springfield, IL, 62704\" }"
+          }
+        ]
+      }
+    },
+    {
+      "_id": "2ba64275-072c-4765-9ec7-5ee28c035831",
+      "colId": "4d7308ef-ebdb-49af-a629-dcf92799792d",
+      "containerId": "3649e98f-5a41-42b9-a654-49087f25a635",
+      "name": "my appointment",
+      "url": "http://localhost:5000/api/v1/appointments/my-appointments",
+      "method": "GET",
+      "sortNum": 60000,
+      "created": "2024-08-25T07:35:25.019Z",
+      "modified": "2024-08-27T01:38:41.373Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJQLTAwMDIiLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTcyNDcyMTIzMiwiZXhwIjoxNzI1NTg1MjMyfQ.m4aj_jwYuWpkpNshd6sAD13S_G1X9_9I2kQbpsiNjEM"
+        }
+      ]
+    },
+    {
+      "_id": "cf174f1c-6e42-4804-9e78-51b98073c5be",
+      "colId": "4d7308ef-ebdb-49af-a629-dcf92799792d",
+      "containerId": "59cd4898-fc58-436d-afc0-3ec112897fb9",
+      "name": "login",
+      "url": "",
+      "method": "GET",
+      "sortNum": 70000,
+      "created": "2024-08-25T11:37:56.169Z",
+      "modified": "2024-08-25T11:37:56.169Z",
+      "headers": []
+    },
+    {
+      "_id": "d91d959e-c692-49f5-b9bb-9485e052110c",
+      "colId": "4d7308ef-ebdb-49af-a629-dcf92799792d",
+      "containerId": "3649e98f-5a41-42b9-a654-49087f25a635",
+      "name": "patient update",
+      "url": "http://localhost:5000/api/v1/patients/66cb17b6e8cc4a1d6b96c088",
+      "method": "PATCH",
+      "sortNum": 80000,
+      "created": "2024-08-25T11:50:52.516Z",
+      "modified": "2024-08-25T11:54:48.718Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJQLTAwMDEiLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTcyNDU4NTkxMCwiZXhwIjoxNzI1NDQ5OTEwfQ.cfp2voUy755O3Jzc_IrOJSYkFA5wezVJONdFPIQXpis"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\":\"update twice\"\n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "a082320a-3964-4122-b717-5d675a78225a",
+      "colId": "4d7308ef-ebdb-49af-a629-dcf92799792d",
+      "containerId": "344c53ef-a35f-4c51-8aaf-01797372d86a",
+      "name": "add test",
+      "url": "http://localhost:5000/api/v1/medical-tests/create-medical-test",
+      "method": "POST",
+      "sortNum": 90000,
+      "created": "2024-08-25T11:56:13.012Z",
+      "modified": "2024-08-27T01:49:19.420Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwMDAxIiwicm9sZSI6InN1cGVyQWRtaW4iLCJpYXQiOjE3MjQ1ODU3NjUsImV4cCI6MTcyNTQ0OTc2NX0.XImNnhLu2cWZMYD6EUNaLLvhea69DW6CQTIz3Brqsr0"
+        }
+      ],
+      "body": {
+        "type": "formdata",
+        "raw": "",
+        "form": [
+          {
+            "name": "data",
+            "value": "{ \"testCode\": \"TC1234556new435435\", \"testName\": \"Complete Blood Count (CBC)\", \"sample\": \"Blood\", \"mrp\": 1200, \"organizationName\": \"HealthCare Diagnostics\", \"organizationContactNumber\": \"+1-234-567-8900\",\"organizationTiming\": [ { \"day\": \"Monday\", \"startTime\": \"08:00 AM\", \"endTime\": \"06:00 PM\" }, { \"day\": \"Tuesday\", \"startTime\": \"08:00 AM\", \"endTime\": \"06:00 PM\" }, { \"day\": \"Wednesday\", \"startTime\": \"08:00 AM\", \"endTime\": \"06:00 PM\" }, { \"day\": \"Thursday\", \"startTime\": \"08:00 AM\", \"endTime\": \"06:00 PM\" }, { \"day\": \"Friday\", \"startTime\": \"08:00 AM\", \"endTime\": \"06:00 PM\" }, { \"day\": \"Saturday\", \"startTime\": \"08:00 AM\", \"endTime\": \"02:00 PM\" } ], \"organizationAddress\": \"123 Health Street, Wellness City, 98765\" }"
+          },
+          {
+            "name": "file",
+            "value": "",
+            "isDisabled": true
+          }
+        ],
+        "files": [
+          {
+            "name": "file",
+            "value": "/home/ananda/Downloads/86967865.jpeg"
+          }
+        ]
+      }
+    }
+  ],
+  "ref": "ulxm2h4urKEswsySAyULEnx_etoi3p5aHBKK7XLOhGlGPXbA9faQ43xrFm-5mcJbgB3p7Pkwopkc5F3FTi09tQ"
+}
